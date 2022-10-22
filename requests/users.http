@@ -1,0 +1,36 @@
+### List all users
+GET http://localhost:4000/users
+
+### Get a particular user
+GET http://localhost:4000/users/6353f3510a54266552199fd8
+
+### Create a new user
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name": "User 3",
+  "phone": "+380991112233",
+  "type": "user"
+}
+
+### Create a new doc
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name": "Doctor",
+  "phone": "+380991112244",
+  "type": "doc"
+}
+
+### Update user
+PUT http://localhost:4000/users/6353f76aaedc926b87cd031a
+Content-Type: application/json
+
+{
+  "name": "User 3"
+}
+
+### Delete a particular user
+DELETE http://localhost:4000/users/6353f708aedc926b87cd0318
