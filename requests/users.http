@@ -2,7 +2,7 @@
 GET http://localhost:4000/users
 
 ### Get a particular user
-GET http://localhost:4000/users/6353f3510a54266552199fd8
+GET http://localhost:4000/users/6353f76aaedc926b87cd031a
 
 ### Create a new user
 POST http://localhost:4000/users
@@ -21,7 +21,8 @@ Content-Type: application/json
 {
   "name": "Doctor",
   "phone": "+380991112244",
-  "type": "doc"
+  "type": "doc",
+  "spec": "therapist"
 }
 
 ### Update user
@@ -33,4 +34,4 @@ Content-Type: application/json
 }
 
 ### Delete a particular user
-DELETE http://localhost:4000/users/6353f708aedc926b87cd0318
+DELETE http://localhost:4000/users/6353f35c0a54266552199fd9

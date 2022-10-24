@@ -1,0 +1,34 @@
+### List all appointments
+GET http://localhost:4000/appointments
+
+### Get a particular appointment
+GET http://localhost:4000/appointments/6353f3510a54266552199fd8
+
+### Create a new appointment
+POST http://localhost:4000/appointments
+Content-Type: application/json
+
+{
+  "date": "2022-10-25T19:36:40.791Z",
+  "user_id": "6353f3510a54266552199fd8",
+  "doctor_id": "6356a3a5c7cd69549df3efc6"
+}
+
+### Update appointment
+PUT http://localhost:4000/appointments/6356b71f3679f67467ed2cae
+Content-Type: application/json
+
+{
+  "active": true
+}
+
+### Delete a particular appointment
+DELETE http://localhost:4000/appointments/6356a5d952a9d9587e6e52bc
+
+### Notify in a day
+POST http://localhost:4000/appointments/notifyInDay
+Password: random-booking-service-password
+
+### Notify in two hours
+POST http://localhost:4000/appointments/notifyInTwoHours
+Password: random-booking-service-password

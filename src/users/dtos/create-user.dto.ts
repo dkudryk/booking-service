@@ -5,7 +5,7 @@ import {
   IsPhoneNumber,
   IsString,
 } from 'class-validator';
-import { UserType } from 'src/utils/const';
+import { DoctorSpec, UserType } from 'src/utils/const';
 
 export class CreateUserDto {
   @IsEmail()
@@ -28,4 +28,8 @@ export class CreateUserDto {
 
   @IsEnum(UserType)
   readonly type: UserType;
+
+  @IsEnum(DoctorSpec)
+  @IsOptional()
+  readonly spec: DoctorSpec;
 }

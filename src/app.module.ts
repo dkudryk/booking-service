@@ -6,11 +6,14 @@ import { AppService } from './app.service';
 import { UsersController } from './users/users.controller';
 import { User } from './users/users.entity';
 import { UsersService } from './users/users.service';
+import { AppointmentsController } from './appointments/appointments.controller';
+import { AppointmentsService } from './appointments/appointments.service';
+import { Appointment } from './appointments/appointments.entity';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forFeature([User]),
+    TypeOrmModule.forFeature([Appointment, User]),
     TypeOrmModule.forRoot({
       type: 'mongodb',
       url: process.env.MONGODB_CONNECTION_STRING,
@@ -21,7 +24,7 @@ import { UsersService } from './users/users.service';
       useNewUrlParser: true,
     }),
   ],
-  controllers: [AppController, UsersController],
-  providers: [AppService, UsersService],
+  controllers: [AppController, UsersController, AppointmentsController],
+  providers: [AppService, UsersService, AppointmentsService],
 })
 export class AppModule {}
